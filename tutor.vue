@@ -1,18 +1,7 @@
-<template>
-  <div class="page">
-    <h1>🎙️ Amharic AI Tutor</h1>
-    <p>Type an Amharic phrase and practice listening.</p>
-    <textarea v-model="text" placeholder="ሰላም፣ እንዴት ነህ?"></textarea>
-    <br><button @click="speak(text)" :disabled="loading">{{ loading ? 'Generating…' : '🔊 Speak Amharic' }}</button>
-    <p v-if="error" class="error">{{ error }}</p>
-    <audio v-if="audioUrl" :src="audioUrl" controls autoplay></audio>
-  </div>
-</template>
+<template><main class="page"><h1>AmharicAI TTS Tutor</h1><textarea v-model="text" rows="5"></textarea><button :disabled="loading||!text.trim()" @click="speak">{{loading?'Generating…':'🔊 Speak Amharic'}}</button><p v-if="error" class="error">{{error}}</p><AudioPlayer v-if="audioUrl" :src="audioUrl"/></main></template>
 <script setup lang="ts">
-const text=ref('ሰላም፣ እንዴት ነህ?')
-const {speak,audioUrl,loading,error}=useTTS()
+const text=ref('ሰላም። ደህና ነህ?'); const audioUrl=ref(''); const loading=ref(false); const error=ref('')
+const {speak:generateSpeech}=useTTS()
+async function speak(){loading.value=true;error.value='';try{audioUrl.value=(await generateSpeech(text.value)).audio_url}catch(e:any){error.value=e?.data?.statusMessage||e?.message||'TTS request failed'}finally{loading.value=false}}
 </script>
-<style scoped>
-textarea{width:100%;max-width:760px;min-height:130px;padding:15px;border:1px solid #ccd9d4;border-radius:12px;font:18px system-ui}
-button{margin:12px 0;padding:12px 18px;border:0;border-radius:10px;background:#16805a;color:#fff;font-weight:800}.error{color:#b42318}
-</style>
+<style scoped>.page{max-width:760px;margin:60px auto;padding:24px;font-family:Inter,system-ui,sans-serif}textarea{width:100%;margin:20px 0;padding:12px;font-size:20px}button{padding:12px 18px}.error{color:#b42318}</style>
