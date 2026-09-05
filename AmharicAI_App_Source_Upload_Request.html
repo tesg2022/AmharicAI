@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AmharicAI — App Source Upload Request</title>
+<style>
+:root{--g:#176b45;--gd:#0d4f33;--gl:#eaf6ef;--b:#176b87;--t:#1f2937;--m:#64748b;--bd:#dbe4e8}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--t);background:linear-gradient(135deg,#f4faf7,#eef7fb);min-height:100vh}
+.wrap{width:min(960px,calc(100% - 32px));margin:48px auto}.card{background:white;border:1px solid var(--bd);border-radius:24px;box-shadow:0 18px 50px #0f32281a;overflow:hidden}
+.hero{padding:42px 44px 34px;background:linear-gradient(135deg,var(--gd),var(--g));color:white}.brand{font-size:14px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin-bottom:14px}
+h1{margin:0;font-size:clamp(28px,5vw,44px);line-height:1.08}.subtitle{margin:16px 0 0;max-width:760px;font-size:17px;line-height:1.65;opacity:.93}
+.content{padding:38px 44px 44px}.request{border:1px solid #cfe3d8;background:var(--gl);border-radius:18px;padding:24px;margin-bottom:30px;font-size:18px;line-height:1.7}.request strong{color:var(--gd)}
+.section-title{font-size:21px;margin:30px 0 14px;color:var(--gd)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.item{border:1px solid var(--bd);border-radius:14px;padding:17px;background:#fbfdfc}.item b{display:block;margin-bottom:6px}.item span{color:var(--m);font-size:14px;line-height:1.5}
+.formats{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.tag{border:1px solid var(--bd);border-radius:999px;padding:7px 12px;background:white;font-size:13px;font-weight:700}
+.note{margin-top:28px;padding:18px 20px;border-left:4px solid var(--b);background:#eef8fb;border-radius:10px;color:#334155;line-height:1.6}.footer{margin-top:26px;color:var(--m);font-size:13px;text-align:center}
+@media(max-width:680px){.wrap{margin:20px auto}.hero,.content{padding:28px 22px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap"><section class="card">
+<header class="hero"><div class="brand">🌍 AmharicAI</div>
+<h1>App Source Upload Request</h1>
+<p class="subtitle">Upload the current AmharicAI app source so the implementation can be reviewed against the actual project instead of being based on assumptions.</p>
+</header>
+<div class="content">
+<div class="request"><strong>Request:</strong><br>
+If you upload the current <strong>AmharicAI app source ZIP/repository</strong>
+(or the relevant Flutter project files), I can give you the
+<strong>exact implementation rather than guessing at the existing form.</strong></div>
+
+<h2 class="section-title">What to upload</h2>
+<div class="grid">
+<div class="item"><b>📦 Complete source ZIP</b><span>The preferred option. Include the complete current Flutter project.</span></div>
+<div class="item"><b>📁 Flutter project files</b><span>Upload the relevant <code>lib/</code>, <code>assets/</code>, configuration, and screen files if the full project is not available.</span></div>
+<div class="item"><b>🔐 Configuration template</b><span>Include configuration structure, but remove real API keys, passwords, tokens, and other secrets.</span></div>
+<div class="item"><b>🧩 Relevant form/screens</b><span>If only one feature is being changed, upload the files containing that screen, form, navigation, and related services.</span></div>
+</div>
+
+<h2 class="section-title">Useful project formats</h2>
+<div class="formats"><span class="tag">.zip</span><span class="tag">.dart</span><span class="tag">pubspec.yaml</span><span class="tag">assets/</span><span class="tag">FastAPI files</span><span class="tag">JSON configuration</span></div>
+
+<h2 class="section-title">What I can do after upload</h2>
+<div class="grid">
+<div class="item"><b>🔎 Inspect the existing implementation</b><span>Identify the actual screens, forms, routes, services, models, and current architecture.</span></div>
+<div class="item"><b>🛠️ Give exact code changes</b><span>Provide file-by-file changes instead of generic examples.</span></div>
+<div class="item"><b>🎙️ Integrate Amharic speech</b><span>Connect the existing app to the planned Amharic TTS/STT architecture where appropriate.</span></div>
+<div class="item"><b>📚 Integrate the textbook</b><span>Map the expanded visual/example textbook content into the existing lesson structure.</span></div>
+</div>
+
+<div class="note"><strong>Security:</strong> Do not upload real Azure, Google, Addis AI, database, Firebase, or other production credentials. Use placeholders such as <code>YOUR_API_KEY</code>. Provider secrets should remain on the backend, not inside the mobile application.</div>
+<p class="footer">AmharicAI • Source-first implementation</p>
+</div></section></main>
+</body></html>
